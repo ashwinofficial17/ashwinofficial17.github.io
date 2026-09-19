@@ -1,0 +1,2398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="Ashwin D - B.Sc Information Technology Student Portfolio">
+
+<title>Ashwin D | B.Sc IT Student</title>
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-padding-top: 75px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #15152a 0%,
+            #0b0b0f 45%,
+            #08080b 100%
+        );
+
+    color: white;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   SELECTION
+===================================================== */
+
+::selection {
+    background: #00d9ff;
+    color: #000;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background:
+        rgba(8, 8, 14, 0.94);
+
+    backdrop-filter: blur(14px);
+
+    -webkit-backdrop-filter: blur(14px);
+
+    padding: 15px 8px;
+
+    text-align: center;
+
+    z-index: 1000;
+
+    border-bottom:
+        1px solid rgba(0, 217, 255, 0.18);
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+.nav-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 4px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+nav a {
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    padding: 8px 10px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    border-radius: 20px;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+nav a:hover {
+
+    color: #00d9ff;
+
+    background:
+        rgba(0, 217, 255, 0.08);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+header {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding:
+        120px 20px 70px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+header::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0, 217, 255, 0.08);
+
+    filter: blur(85px);
+
+    top: 8%;
+    left: -130px;
+
+    animation:
+        backgroundMove 8s ease-in-out infinite alternate;
+}
+
+header::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0, 100, 255, 0.08);
+
+    filter: blur(85px);
+
+    bottom: 5%;
+    right: -110px;
+
+    animation:
+        backgroundMove 10s ease-in-out infinite alternate-reverse;
+}
+
+.hero {
+
+    max-width: 800px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   PROFILE PHOTO
+===================================================== */
+
+.profile-photo {
+
+    width: 190px;
+    height: 190px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border:
+        4px solid #00d9ff;
+
+    margin-bottom: 30px;
+
+    box-shadow:
+        0 0 20px rgba(0,217,255,0.55),
+        0 0 50px rgba(0,217,255,0.22);
+
+    animation:
+        photoFloat 4s ease-in-out infinite,
+        photoAppear 1.2s ease forwards;
+
+    opacity: 0;
+}
+
+
+/* =====================================================
+   HERO TEXT
+===================================================== */
+
+.hero h1 {
+
+    font-size: 52px;
+
+    line-height: 1.2;
+
+    margin-bottom: 12px;
+
+    animation:
+        slideUp 1s ease 0.3s forwards;
+
+    opacity: 0;
+}
+
+.hero h1 span {
+
+    color: #00d9ff;
+
+    text-shadow:
+        0 0 15px rgba(0,217,255,0.45);
+}
+
+.hero h2 {
+
+    font-size: 24px;
+
+    color: #cccccc;
+
+    margin-bottom: 20px;
+
+    animation:
+        slideUp 1s ease 0.5s forwards;
+
+    opacity: 0;
+}
+
+.hero p {
+
+    color: #aaaaaa;
+
+    max-width: 620px;
+
+    margin: auto;
+
+    animation:
+        slideUp 1s ease 0.7s forwards;
+
+    opacity: 0;
+}
+
+
+/* =====================================================
+   MAIN BUTTON
+===================================================== */
+
+.btn {
+
+    display: inline-block;
+
+    margin-top: 28px;
+
+    padding:
+        14px 30px;
+
+    background:
+        #00d9ff;
+
+    color:
+        #000;
+
+    text-decoration:
+        none;
+
+    border-radius:
+        30px;
+
+    font-weight:
+        bold;
+
+    transition:
+        0.3s;
+
+    animation:
+        slideUp 1s ease 0.9s forwards;
+
+    opacity: 0;
+
+    box-shadow:
+        0 0 20px rgba(0,217,255,0.3);
+}
+
+.btn:hover {
+
+    transform:
+        translateY(-4px) scale(1.03);
+
+    box-shadow:
+        0 0 35px rgba(0,217,255,0.55);
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section {
+
+    padding:
+        100px 20px;
+
+    max-width:
+        1000px;
+
+    margin:
+        auto;
+}
+
+section h2 {
+
+    text-align:
+        center;
+
+    font-size:
+        36px;
+
+    margin-bottom:
+        45px;
+
+    color:
+        #00d9ff;
+
+    text-shadow:
+        0 0 15px rgba(0,217,255,0.3);
+}
+
+
+/* =====================================================
+   REVEAL ANIMATION
+===================================================== */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(45px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about {
+
+    text-align:
+        center;
+
+    color:
+        #cccccc;
+
+    max-width:
+        760px;
+
+    margin:
+        auto;
+
+    font-size:
+        17px;
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+.skills-container {
+
+    max-width:
+        800px;
+
+    margin:
+        auto;
+}
+
+.skill {
+
+    margin-bottom:
+        28px;
+}
+
+.skill-info {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    margin-bottom:
+        8px;
+}
+
+.skill-name {
+
+    font-weight:
+        bold;
+
+    color:
+        white;
+}
+
+.skill-percent {
+
+    color:
+        #00d9ff;
+
+    font-weight:
+        bold;
+
+    flex-shrink:
+        0;
+}
+
+.skill-bar {
+
+    width:
+        100%;
+
+    height:
+        12px;
+
+    background:
+        #191923;
+
+    border-radius:
+        20px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid #292936;
+}
+
+.skill-progress {
+
+    height:
+        100%;
+
+    width:
+        0;
+
+    border-radius:
+        20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #007bff,
+            #00d9ff
+        );
+
+    box-shadow:
+        0 0 15px rgba(0,217,255,0.45);
+
+    transition:
+        width 1.8s ease;
+}
+
+
+/* =====================================================
+   EDUCATION
+===================================================== */
+
+.cards {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap:
+        22px;
+}
+
+.card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #171720,
+            #111118
+        );
+
+    padding:
+        30px;
+
+    border-radius:
+        20px;
+
+    text-align:
+        center;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    transition:
+        0.35s;
+}
+
+.card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(0,217,255,0.5);
+
+    box-shadow:
+        0 10px 35px
+        rgba(0,217,255,0.12);
+}
+
+.card h3 {
+
+    color:
+        #00d9ff;
+
+    margin-bottom:
+        12px;
+}
+
+.card p {
+
+    color:
+        #bbbbbb;
+}
+
+
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+.projects-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(280px, 1fr)
+        );
+
+    gap:
+        25px;
+}
+
+.project-card {
+
+    position:
+        relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            #181822,
+            #101017
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    border-radius:
+        22px;
+
+    padding:
+        30px;
+
+    overflow:
+        hidden;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.project-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        180px;
+
+    height:
+        180px;
+
+    border-radius:
+        50%;
+
+    background:
+        #00d9ff;
+
+    filter:
+        blur(90px);
+
+    opacity:
+        0;
+
+    top:
+        -100px;
+
+    right:
+        -100px;
+
+    transition:
+        0.4s;
+}
+
+.project-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(0,217,255,0.5);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,217,255,0.12);
+}
+
+.project-card:hover::before {
+
+    opacity:
+        0.18;
+}
+
+.project-icon {
+
+    width:
+        60px;
+
+    height:
+        60px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        rgba(0,217,255,0.1);
+
+    border:
+        1px solid rgba(0,217,255,0.25);
+
+    border-radius:
+        16px;
+
+    font-size:
+        28px;
+
+    margin-bottom:
+        20px;
+}
+
+.project-card h3 {
+
+    color:
+        #00d9ff;
+
+    font-size:
+        22px;
+
+    margin-bottom:
+        12px;
+}
+
+.project-card p {
+
+    color:
+        #bbbbbb;
+
+    font-size:
+        15px;
+
+    margin-bottom:
+        18px;
+}
+
+.tech-list {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+    margin-bottom:
+        22px;
+}
+
+.tech {
+
+    padding:
+        6px 11px;
+
+    border-radius:
+        20px;
+
+    background:
+        rgba(0,217,255,0.08);
+
+    color:
+        #00d9ff;
+
+    border:
+        1px solid rgba(0,217,255,0.2);
+
+    font-size:
+        12px;
+
+    font-weight:
+        bold;
+}
+
+.project-buttons {
+
+    display:
+        flex;
+
+    gap:
+        10px;
+}
+
+.project-btn {
+
+    padding:
+        9px 16px;
+
+    border-radius:
+        20px;
+
+    text-decoration:
+        none;
+
+    font-size:
+        13px;
+
+    font-weight:
+        bold;
+
+    transition:
+        0.3s;
+
+    text-align:
+        center;
+}
+
+.demo-btn {
+
+    background:
+        #00d9ff;
+
+    color:
+        #000;
+}
+
+.github-btn {
+
+    background:
+        transparent;
+
+    color:
+        #00d9ff;
+
+    border:
+        1px solid #00d9ff;
+}
+
+.project-btn:hover {
+
+    transform:
+        translateY(-3px);
+}
+
+.coming-soon {
+
+    opacity:
+        0.8;
+}
+
+
+/* =====================================================
+   PROFESSIONAL LINKS
+===================================================== */
+
+.links-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(210px, 1fr)
+        );
+
+    gap:
+        20px;
+
+    max-width:
+        900px;
+
+    margin:
+        auto;
+}
+
+.link-card {
+
+    display:
+        block;
+
+    text-decoration:
+        none;
+
+    background:
+        linear-gradient(
+            145deg,
+            #181822,
+            #101017
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    border-radius:
+        20px;
+
+    padding:
+        28px 20px;
+
+    text-align:
+        center;
+
+    color:
+        white;
+
+    overflow:
+        hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.link-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(0,217,255,0.55);
+
+    box-shadow:
+        0 12px 35px
+        rgba(0,217,255,0.14);
+}
+
+.link-icon {
+
+    width:
+        65px;
+
+    height:
+        65px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin:
+        0 auto 18px;
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(0,217,255,0.10);
+
+    border:
+        1px solid rgba(0,217,255,0.25);
+
+    font-size:
+        30px;
+
+    transition:
+        0.35s;
+}
+
+.link-card:hover .link-icon {
+
+    transform:
+        scale(1.08);
+}
+
+.link-card h3 {
+
+    color:
+        #00d9ff;
+
+    font-size:
+        20px;
+
+    margin-bottom:
+        8px;
+}
+
+.link-card p {
+
+    color:
+        #aaaaaa;
+
+    font-size:
+        13px;
+
+    overflow-wrap:
+        anywhere;
+
+    word-break:
+        break-word;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact {
+
+    text-align:
+        center;
+
+    max-width:
+        750px;
+
+    margin:
+        auto;
+}
+
+.contact p {
+
+    margin:
+        18px 0;
+
+    font-size:
+        17px;
+
+    overflow-wrap:
+        anywhere;
+}
+
+.contact a {
+
+    color:
+        #00d9ff;
+
+    text-decoration:
+        none;
+
+    transition:
+        0.3s;
+
+    overflow-wrap:
+        anywhere;
+}
+
+.contact a:hover {
+
+    color:
+        white;
+
+    text-shadow:
+        0 0 10px #00d9ff;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    text-align:
+        center;
+
+    padding:
+        30px 20px;
+
+    background:
+        #08080b;
+
+    color:
+        #777777;
+
+    border-top:
+        1px solid rgba(255,255,255,0.05);
+}
+
+
+/* =====================================================
+   SCROLL TOP BUTTON
+===================================================== */
+
+#topButton {
+
+    position:
+        fixed;
+
+    right:
+        20px;
+
+    bottom:
+        20px;
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    border-radius:
+        50%;
+
+    border:
+        none;
+
+    background:
+        #00d9ff;
+
+    color:
+        #000;
+
+    font-size:
+        20px;
+
+    font-weight:
+        bold;
+
+    cursor:
+        pointer;
+
+    display:
+        none;
+
+    z-index:
+        999;
+
+    box-shadow:
+        0 0 25px
+        rgba(0,217,255,0.5);
+
+    transition:
+        transform 0.3s ease;
+}
+
+#topButton:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.05);
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes slideUp {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(35px);
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes photoAppear {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            scale(0.7);
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1);
+    }
+}
+
+
+@keyframes photoFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px);
+    }
+}
+
+
+@keyframes backgroundMove {
+
+    from {
+
+        transform:
+            translate(0,0);
+    }
+
+    to {
+
+        transform:
+            translate(50px,30px);
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    nav {
+
+        padding:
+            10px 4px;
+
+        overflow-x:
+            auto;
+
+        scrollbar-width:
+            none;
+    }
+
+    nav::-webkit-scrollbar {
+
+        display:
+            none;
+    }
+
+    .nav-container {
+
+        justify-content:
+            flex-start;
+
+        width:
+            max-content;
+
+        min-width:
+            100%;
+    }
+
+    nav a {
+
+        font-size:
+            12px;
+
+        padding:
+            8px 9px;
+
+        margin:
+            0;
+    }
+
+    header {
+
+        min-height:
+            calc(100vh - 60px);
+
+        padding:
+            100px 18px 60px;
+    }
+
+    .profile-photo {
+
+        width:
+            165px;
+
+        height:
+            165px;
+
+        margin-bottom:
+            25px;
+    }
+
+    .hero h1 {
+
+        font-size:
+            39px;
+
+        line-height:
+            1.2;
+    }
+
+    .hero h2 {
+
+        font-size:
+            20px;
+    }
+
+    .hero p {
+
+        font-size:
+            15px;
+
+        line-height:
+            1.8;
+    }
+
+    .btn {
+
+        padding:
+            13px 24px;
+
+        font-size:
+            14px;
+    }
+
+    section {
+
+        padding:
+            80px 18px;
+    }
+
+    section h2 {
+
+        font-size:
+            32px;
+
+        margin-bottom:
+            40px;
+    }
+
+    .about {
+
+        font-size:
+            16px;
+
+        line-height:
+            1.9;
+    }
+
+    .skill {
+
+        margin-bottom:
+            25px;
+    }
+
+    .skill-name {
+
+        font-size:
+            15px;
+    }
+
+    .skill-percent {
+
+        font-size:
+            15px;
+    }
+
+    .cards {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .card {
+
+        padding:
+            28px 20px;
+    }
+
+    .projects-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .project-card {
+
+        padding:
+            25px;
+    }
+
+    .project-buttons {
+
+        flex-direction:
+            column;
+    }
+
+    .project-btn {
+
+        width:
+            100%;
+    }
+
+    .links-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .link-card {
+
+        padding:
+            26px 18px;
+    }
+
+    .contact p {
+
+        font-size:
+            16px;
+
+        line-height:
+            1.8;
+    }
+
+    #topButton {
+
+        right:
+            18px;
+
+        bottom:
+            18px;
+
+        width:
+            48px;
+
+        height:
+            48px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media (max-width: 380px) {
+
+    nav a {
+
+        font-size:
+            11px;
+
+        padding:
+            7px 8px;
+    }
+
+    .hero h1 {
+
+        font-size:
+            34px;
+    }
+
+    .hero h2 {
+
+        font-size:
+            18px;
+    }
+
+    section h2 {
+
+        font-size:
+            29px;
+    }
+
+    .profile-photo {
+
+        width:
+            150px;
+
+        height:
+            150px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
+    <div class="nav-container">
+
+        <a href="#home">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#education">Education</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#links">Links</a>
+
+        <a href="#contact">Contact</a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HOME
+===================================================== -->
+
+<header id="home">
+
+    <div class="hero">
+
+        <img
+            src="images/profile.jpg"
+            alt="Ashwin D"
+            class="profile-photo"
+        >
+
+        <h1>
+            Hi, I'm <span>Ashwin D</span>
+        </h1>
+
+        <h2>
+            B.Sc Information Technology Student
+        </h2>
+
+        <p>
+            Passionate about technology, web development,
+            programming and emerging technologies.
+            I am continuously learning and building my skills
+            to create useful digital experiences.
+        </p>
+
+        <a
+            href="#about"
+            class="btn"
+        >
+            Explore My Portfolio
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about">
+
+    <div class="reveal">
+
+        <h2>
+            About Me
+        </h2>
+
+        <p class="about">
+
+            I'm Ashwin D, currently pursuing B.Sc Information
+            Technology at KG College of Arts and Science,
+            Coimbatore.
+
+            I am interested in web development, programming,
+            Artificial Intelligence and emerging technologies.
+
+            I enjoy learning new technologies and working on
+            projects that help me improve my technical skills.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section id="skills">
+
+    <div class="reveal">
+
+        <h2>
+            My Skills
+        </h2>
+
+        <div class="skills-container">
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+
+                    <span class="skill-name">
+                        HTML
+                    </span>
+
+                    <span class="skill-percent">
+                        85%
+                    </span>
+
+                </div>
+
+                <div class="skill-bar">
+
+                    <div
+                        class="skill-progress"
+                        data-width="85%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+
+                    <span class="skill-name">
+                        CSS
+                    </span>
+
+                    <span class="skill-percent">
+                        80%
+                    </span>
+
+                </div>
+
+                <div class="skill-bar">
+
+                    <div
+                        class="skill-progress"
+                        data-width="80%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+
+                    <span class="skill-name">
+                        JavaScript
+                    </span>
+
+                    <span class="skill-percent">
+                        65%
+                    </span>
+
+                </div>
+
+                <div class="skill-bar">
+
+                    <div
+                        class="skill-progress"
+                        data-width="65%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+
+                    <span class="skill-name">
+                        C Programming
+                    </span>
+
+                    <span class="skill-percent">
+                        75%
+                    </span>
+
+                </div>
+
+                <div class="skill-bar">
+
+                    <div
+                        class="skill-progress"
+                        data-width="75%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+
+                    <span class="skill-name">
+                        Responsive Web Design
+                    </span>
+
+                    <span class="skill-percent">
+                        80%
+                    </span>
+
+                </div>
+
+                <div class="skill-bar">
+
+                    <div
+                        class="skill-progress"
+                        data-width="80%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+
+                    <span class="skill-name">
+                        AI & Emerging Technologies
+                    </span>
+
+                    <span class="skill-percent">
+                        55%
+                    </span>
+
+                </div>
+
+                <div class="skill-bar">
+
+                    <div
+                        class="skill-progress"
+                        data-width="55%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EDUCATION
+===================================================== -->
+
+<section id="education">
+
+    <div class="reveal">
+
+        <h2>
+            Education
+        </h2>
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <h3>
+                    B.Sc Information Technology
+                </h3>
+
+                <p>
+                    KG College of Arts and Science<br>
+                    Coimbatore
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    12th CBSE
+                </h3>
+
+                <p>
+                    Sri Chaitanya Techno School<br>
+                    Thindal, Erode
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    10th CBSE
+                </h3>
+
+                <p>
+                    Sri Chaitanya Techno School<br>
+                    Chinnavedampatti, Coimbatore
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section id="projects">
+
+    <div class="reveal">
+
+        <h2>
+            My Projects
+        </h2>
+
+        <div class="projects-grid">
+
+
+            <!-- PERSONAL PORTFOLIO -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Personal Portfolio
+                </h3>
+
+                <p>
+                    A responsive personal portfolio website
+                    designed to showcase my education,
+                    skills, projects and professional profile.
+                </p>
+
+                <div class="tech-list">
+
+                    <span class="tech">
+                        HTML
+                    </span>
+
+                    <span class="tech">
+                        CSS
+                    </span>
+
+                    <span class="tech">
+                        JavaScript
+                    </span>
+
+                </div>
+
+                <div class="project-buttons">
+
+                    <a
+                        href="#home"
+                        class="project-btn demo-btn"
+                    >
+                        Live Preview
+                    </a>
+
+                    <a
+                        href="https://github.com/ashwinofficial17"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-btn github-btn"
+                    >
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FUTURE PROJECT -->
+
+            <div class="project-card coming-soon">
+
+                <div class="project-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Future Project
+                </h3>
+
+                <p>
+                    A new project will be added here
+                    as I continue learning programming,
+                    web development and modern technologies.
+                </p>
+
+                <div class="tech-list">
+
+                    <span class="tech">
+                        Coming Soon
+                    </span>
+
+                </div>
+
+                <div class="project-buttons">
+
+                    <span
+                        class="project-btn github-btn"
+                    >
+                        In Development
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- AI PROJECT -->
+
+            <div class="project-card coming-soon">
+
+                <div class="project-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    AI Project
+                </h3>
+
+                <p>
+                    Future AI or emerging technology
+                    project will be showcased here.
+                </p>
+
+                <div class="tech-list">
+
+                    <span class="tech">
+                        AI
+                    </span>
+
+                    <span class="tech">
+                        Future
+                    </span>
+
+                </div>
+
+                <div class="project-buttons">
+
+                    <span
+                        class="project-btn github-btn"
+                    >
+                        Coming Soon
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROFESSIONAL LINKS
+===================================================== -->
+
+<section id="links">
+
+    <div class="reveal">
+
+        <h2>
+            Professional Links
+        </h2>
+
+        <div class="links-grid">
+
+
+            <!-- GITHUB -->
+
+            <a
+                href="https://github.com/ashwinofficial17"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-card"
+            >
+
+                <div class="link-icon">
+                    💻
+                </div>
+
+                <h3>
+                    GitHub
+                </h3>
+
+                <p>
+                    github.com/ashwinofficial17
+                </p>
+
+            </a>
+
+
+
+            <!-- LINKEDIN -->
+
+            <a
+                href="https://www.linkedin.com/in/ashwin-d-367a5b433"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-card"
+            >
+
+                <div class="link-icon">
+                    💼
+                </div>
+
+                <h3>
+                    LinkedIn
+                </h3>
+
+                <p>
+                    View my professional profile
+                </p>
+
+            </a>
+
+
+
+            <!-- EMAIL -->
+
+            <a
+                href="mailto:theashwin17@gmail.com"
+                class="link-card"
+            >
+
+                <div class="link-icon">
+                    📧
+                </div>
+
+                <h3>
+                    Email
+                </h3>
+
+                <p>
+                    theashwin17@gmail.com
+                </p>
+
+            </a>
+
+
+
+            <!-- PHONE -->
+
+            <a
+                href="tel:8122641037"
+                class="link-card"
+            >
+
+                <div class="link-icon">
+                    📱
+                </div>
+
+                <h3>
+                    Phone
+                </h3>
+
+                <p>
+                    8122641037
+                </p>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact">
+
+    <div class="reveal">
+
+        <h2>
+            Contact Me
+        </h2>
+
+        <div class="contact">
+
+
+            <p>
+
+                📱
+                <strong>
+                    Phone:
+                </strong>
+
+                <a href="tel:8122641037">
+                    8122641037
+                </a>
+
+            </p>
+
+
+            <p>
+
+                📧
+                <strong>
+                    Email:
+                </strong>
+
+                <a href="mailto:theashwin17@gmail.com">
+                    theashwin17@gmail.com
+                </a>
+
+            </p>
+
+
+            <p>
+
+                💼
+                <strong>
+                    LinkedIn:
+                </strong>
+
+                <a
+                    href="https://www.linkedin.com/in/ashwin-d-367a5b433"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View My LinkedIn
+                </a>
+
+            </p>
+
+
+            <p>
+
+                💻
+                <strong>
+                    GitHub:
+                </strong>
+
+                <a
+                    href="https://github.com/ashwinofficial17"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    github.com/ashwinofficial17
+                </a>
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        © 2026 Ashwin D. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- =====================================================
+     SCROLL TOP
+===================================================== -->
+
+<button
+    id="topButton"
+    onclick="goTop()"
+    aria-label="Scroll to top"
+>
+    ↑
+</button>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =====================================================
+   REVEAL + SKILL ANIMATION
+===================================================== */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+const skillBars =
+    document.querySelectorAll(".skill-progress");
+
+
+function revealOnScroll() {
+
+    revealElements.forEach(function(element) {
+
+        const windowHeight =
+            window.innerHeight;
+
+        const elementTop =
+            element.getBoundingClientRect().top;
+
+        if (
+            elementTop <
+            windowHeight - 100
+        ) {
+
+            element.classList.add("active");
+
+        }
+
+    });
+
+
+    const skillsSection =
+        document.getElementById("skills");
+
+
+    if (skillsSection) {
+
+        const skillsTop =
+            skillsSection.getBoundingClientRect().top;
+
+
+        if (
+            skillsTop <
+            window.innerHeight - 100
+        ) {
+
+            skillBars.forEach(function(bar) {
+
+                bar.style.width =
+                    bar.getAttribute("data-width");
+
+            });
+
+        }
+
+    }
+
+}
+
+
+/* Run immediately */
+
+revealOnScroll();
+
+
+/* Run while scrolling */
+
+window.addEventListener(
+    "scroll",
+    revealOnScroll
+);
+
+
+
+/* =====================================================
+   SCROLL TO TOP BUTTON
+===================================================== */
+
+const topButton =
+    document.getElementById("topButton");
+
+
+window.addEventListener(
+    "scroll",
+    function() {
+
+        if (
+            window.scrollY > 400
+        ) {
+
+            topButton.style.display =
+                "block";
+
+        } else {
+
+            topButton.style.display =
+                "none";
+
+        }
+
+    }
+);
+
+
+function goTop() {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>
